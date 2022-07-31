@@ -11,6 +11,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 COPY installer.sh .
 
+RUN bash docker login
 RUN bash installer.sh
 
 # changing workdir
